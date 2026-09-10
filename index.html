@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Entoma — Bionic Entomology & Mechanical Automata</title>
+  <meta name="description" content="Luxury kinetic art and haute horology landing page showcasing handcrafted biomimetic insect automata with interactive 3D cards, bespoke configurator, and exhibition salon.">
+  <meta property="og:title" content="Entoma — Bionic Entomology & Mechanical Automata">
+  <meta property="og:description" content="Handcrafted biomimetic arthropods cast in aerospace titanium, 24-karat gold filigree, and hand-tuned mechanical tourbillon escapements.">
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+
+  <!--=============== CSS STYLESHEET ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Background Bio-luminescence Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!--=============== ANNOUNCEMENT BAR ===============-->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-text">
+      <span class="announcement-badge">Salon 2026</span>
+      <span>Geneva & Tokyo Gallery Previews Now Open • Private Concierge Bookings Available</span>
+    </div>
+  </div>
+
+  <!--=============== HEADER & NAVIGATION ===============-->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" id="main-nav">
+        <a href="#hero" class="nav__logo" id="brand-logo" aria-label="Entoma Atelier Home">
+          <svg class="nav__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v3m0 14v3M8 4l2 3m4-3-2 3M4 11h3m10 0h3M5 19l3-2m8 2-3-2"/>
+            <rect x="8" y="7" width="8" height="10" rx="4"/>
+            <circle cx="12" cy="11" r="1.5"/>
+          </svg>
+          <span>ENTOMA</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#collection" class="nav__link" id="nav-collection">Collection</a></li>
+            <li><a href="#anatomy" class="nav__link" id="nav-anatomy">Anatomy</a></li>
+            <li><a href="#atelier-craft" class="nav__link" id="nav-atelier">Atelier Craft</a></li>
+            <li><a href="#calibers" class="nav__link" id="nav-calibers">Calibers</a></li>
+            <li><a href="#configurator" class="nav__link" id="nav-configurator">Bespoke Atelier</a></li>
+            <li><a href="#vitrines" class="nav__link" id="nav-vitrines">Vitrines</a></li>
+            <li><a href="#salons" class="nav__link" id="nav-salons">Salons</a></li>
+            <li><a href="#ledger" class="nav__link" id="nav-ledger">Provenance</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__actions">
+          <!-- Audio Synthesizer Toggle -->
+          <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle Mechanical Soundscape" aria-pressed="false">
+            <div class="sound-wave" id="sound-wave-indicator">
+              <span></span><span></span><span></span>
+            </div>
+            <span id="audio-btn-label">Audio</span>
+          </button>
+
+          <!-- Theme Palette Selector -->
+          <div class="theme-selector" title="Color Theme">
+            <button class="theme-btn active" data-theme="emerald" title="Verdigris Emerald" aria-label="Verdigris Emerald"></button>
+            <button class="theme-btn" data-theme="gold" title="Imperial Gold" aria-label="Imperial Gold"></button>
+            <button class="theme-btn" data-theme="obsidian" title="Midnight Obsidian" aria-label="Midnight Obsidian"></button>
+          </div>
+
+          <a href="#collection" class="btn-primary concierge-trigger-btn" id="header-cta-btn" data-salon="Private Viewing Acquisition">
+            Acquire <i class="ri-arrow-right-up-line"></i>
+          </a>
+
+          <button class="nav__toggle" id="nav-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <i class="ri-menu-3-line"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!--=============== HERO SECTION ===============-->
+    <section class="hero section" id="hero">
+      <div class="hero__glow"></div>
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__tag" id="hero-status-tag">
+            <span class="hero__tag-dot"></span>
+            <span>HAUTE KINETIC ENTOMOLOGY // PRIVATE EDITIONS</span>
+          </div>
+
+          <h1 class="hero__title" id="hero-main-title">
+            Where Kinetic Clockwork Meets <span>Natural Elegance</span>.
+          </h1>
+
+          <p class="hero__subtitle" id="hero-main-desc">
+            Handcrafted biomimetic arthropods sculpted in aerospace titanium, 24-karat gold filigree, and hand-tuned mechanical tourbillon escapements. Each piece is a numbered kinetic sculpture created for discerning collectors.
+          </p>
+
+          <div class="hero__cta-group">
+            <a href="#collection" class="btn-primary" id="hero-explore-btn">
+              Explore Masterworks <i class="ri-arrow-down-line"></i>
+            </a>
+            <a href="#anatomy" class="btn-outline" id="hero-anatomy-btn">
+              Interactive Anatomy <i class="ri-compass-3-line"></i>
+            </a>
+            <a href="#configurator" class="btn-outline" id="hero-bespoke-btn">
+              Commission Bespoke <i class="ri-tools-line"></i>
+            </a>
+          </div>
+
+          <!-- Metrics Ticker Ribbon -->
+          <div class="hero__metrics" id="hero-metrics-ribbon">
+            <div class="metric__item">
+              <span class="metric__value">384</span>
+              <span class="metric__label">Hand-Turned Gears</span>
+            </div>
+            <div class="metric__item">
+              <span class="metric__value">0.015mm</span>
+              <span class="metric__label">Precision Tolerance</span>
+            </div>
+            <div class="metric__item">
+              <span class="metric__value">96 Hrs</span>
+              <span class="metric__label">Kinetic Autonomy</span>
+            </div>
+            <div class="metric__item">
+              <span class="metric__value">Strictly 12</span>
+              <span class="metric__label">Pieces Per Edition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== THE PERMANENT COLLECTION (ENHANCED ORIGINAL CARDS) ===============-->
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">The Masterworks</span>
+          <h2 class="section__title">The Permanent Collection</h2>
+          <p class="section__desc">
+            Three singular specimens embodying micro-horological mastery and anatomical perfection. Hover over each specimen to witness its kinetic transformation.
+          </p>
+        </div>
+
+        <!-- Taxonomy Filters -->
+        <div class="collection__filters" id="collection-filter-bar">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All Specimens</button>
+          <button class="filter-btn" data-filter="hymenoptera" id="filter-hymenoptera">Hymenoptera (Bees)</button>
+          <button class="filter-btn" data-filter="lepidoptera" id="filter-lepidoptera">Lepidoptera (Butterflies & Moths)</button>
+          <button class="filter-btn" data-filter="coleoptera" id="filter-coleoptera">Coleoptera (Beetles & Scarabs)</button>
+          <button class="filter-btn" data-filter="odonata" id="filter-odonata">Odonata (Dragonflies)</button>
+        </div>
+
+        <!-- The 3 Original Cards with full interactive hooks -->
+        <div class="card__container" id="card-list">
+          
+          <!-- Specimen 1: Queen Bee -->
+          <article class="card__article" id="card-queen-bee" data-taxon="hymenoptera" data-specimen="queen-bee">
+            <span class="card__badge">Limited Edition</span>
+            <span class="card__serial">ENT-084-QB</span>
+
+            <img src="assets/img/insect-1.png" alt="Elegant Queen Bee" class="card__img" id="img-queen-bee">
+
+            <div class="card__data">
+              <h3 class="card__title">Elegant <br> Queen Bee</h3>
+              <span class="card__price">$5,999</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+            
+            <a href="#dossier" class="card__button" id="btn-queen-bee" data-specimen="queen-bee">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <!-- Specimen 2: Magic Butterfly -->
+          <article class="card__article" id="card-magic-butterfly" data-taxon="lepidoptera" data-specimen="magic-butterfly">
+            <span class="card__badge">Limited Edition</span>
+            <span class="card__serial">ENT-102-MB</span>
+
+            <img src="assets/img/insect-2.png" alt="Mechanical Magic Butterfly" class="card__img" id="img-magic-butterfly">
+
+            <div class="card__data">
+              <h3 class="card__title">Mechanical Magic <br> Butterfly</h3>
+              <span class="card__price">$3,999</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+
+            <a href="#dossier" class="card__button" id="btn-magic-butterfly" data-specimen="magic-butterfly">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <!-- Specimen 3: Flower Beetle -->
+          <article class="card__article" id="card-flower-beetle" data-taxon="coleoptera" data-specimen="flower-beetle">
+            <span class="card__badge">Masterpiece Series</span>
+            <span class="card__serial">ENT-217-FB</span>
+
+            <img src="assets/img/insect-3.png" alt="Wonderful Flower Beetle" class="card__img" id="img-flower-beetle">
+
+            <div class="card__data">
+              <h3 class="card__title">Wonderful <br> Flower Beetle</h3>
+              <span class="card__price">$8,999</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+
+            <a href="#dossier" class="card__button" id="btn-flower-beetle" data-specimen="flower-beetle">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <!-- Specimen 4: Chronos Dragonfly -->
+          <article class="card__article" id="card-chronos-dragonfly" data-taxon="odonata" data-specimen="chronos-dragonfly">
+            <span class="card__badge">Limited Edition</span>
+            <span class="card__serial">ENT-305-CD</span>
+
+            <img src="assets/img/chronos_dragonfly_1789024328486.jpg" alt="Chronos Dragonfly Automaton" class="card__img card__img--framed" id="img-chronos-dragonfly">
+
+            <div class="card__data">
+              <h3 class="card__title">Chronos <br> Dragonfly</h3>
+              <span class="card__price">$7,450</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+            
+            <a href="#dossier" class="card__button" id="btn-chronos-dragonfly" data-specimen="chronos-dragonfly">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <!-- Specimen 5: Aegis Golden Scarab -->
+          <article class="card__article" id="card-aegis-scarab" data-taxon="coleoptera" data-specimen="aegis-scarab">
+            <span class="card__badge">Masterpiece Series</span>
+            <span class="card__serial">ENT-412-GS</span>
+
+            <img src="assets/img/aegis_scarab_1789024346490.jpg" alt="Aegis Golden Scarab Automaton" class="card__img card__img--framed" id="img-aegis-scarab">
+
+            <div class="card__data">
+              <h3 class="card__title">Aegis Golden <br> Scarab</h3>
+              <span class="card__price">$9,800</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+            
+            <a href="#dossier" class="card__button" id="btn-aegis-scarab" data-specimen="aegis-scarab">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+          <!-- Specimen 6: Lunar Emperor Moth -->
+          <article class="card__article" id="card-lunar-moth" data-taxon="lepidoptera" data-specimen="lunar-moth">
+            <span class="card__badge">Limited Edition</span>
+            <span class="card__serial">ENT-518-LM</span>
+
+            <img src="assets/img/lunar_moth_1789024359170.jpg" alt="Lunar Emperor Moth Automaton" class="card__img card__img--framed" id="img-lunar-moth">
+
+            <div class="card__data">
+              <h3 class="card__title">Lunar Emperor <br> Moth</h3>
+              <span class="card__price">$6,250</span>
+            </div>
+
+            <img src="assets/img/bg-card.png" alt="Card Background Pattern" class="card__bg">
+            
+            <a href="#dossier" class="card__button" id="btn-lunar-moth" data-specimen="lunar-moth">
+              View More <i class="ri-arrow-right-line"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!--=============== ANATOMY & BIOMIMETIC SCHEMATICS SECTION ===============-->
+    <section class="section" id="anatomy">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Micro-Horological Engineering</span>
+          <h2 class="section__title">Anatomy of an Automaton</h2>
+          <p class="section__desc">
+            Explore the sub-assemblies powering Entoma creations. Select any glowing coordinate to inspect mechanical tolerances, materials, and kinetics.
+          </p>
+        </div>
+
+        <div class="schematic__wrapper">
+          <!-- Interactive Diagram with Hotspots -->
+          <div class="schematic__visual">
+            <div class="schematic__blueprint-grid"></div>
+
+            <!-- Pulsing Hotspots -->
+            <button class="schematic-hotspot hotspot-escapement active" data-feature="escapement" aria-label="Inspect Tourbillon Escapement">01</button>
+            <button class="schematic-hotspot hotspot-wings" data-feature="wings" aria-label="Inspect Harmonic Wing Cams">02</button>
+            <button class="schematic-hotspot hotspot-chitin" data-feature="chitin" aria-label="Inspect Zirconium Chitin">03</button>
+            <button class="schematic-hotspot hotspot-tarsal" data-feature="tarsal" aria-label="Inspect Tarsal Claws">04</button>
+
+            <img src="assets/img/insect-1.png" alt="Technical Diagram of Queen Bee" class="schematic__main-img" id="schematic-img">
+          </div>
+
+          <!-- Dynamic Feature Details -->
+          <div class="schematic__details-box" id="anatomy-details-box">
+            <span class="schematic__badge" id="anatomy-feature-badge">Escapement / 28,800 VPH</span>
+            <h3 class="schematic__feature-title" id="anatomy-feature-title">Chronometer Tourbillon Escapement</h3>
+            <div class="schematic__feature-subtitle" id="anatomy-feature-subtitle">Sub-assembly A-01 // Core Kinetic Motor</div>
+            <p class="schematic__feature-desc" id="anatomy-feature-desc">
+              Suspended in a featherweight titanium cage, the tourbillon counters gravity while maintaining chronometric cadence. Fitted with a Breguet overcoil hairspring and gold timing screws adjusted to six positions.
+            </p>
+            <div class="schematic__spec-bar" id="anatomy-feature-spec">
+              Tolerance: ±1.5 sec/day • Reserve: 72 Hours • Material: Glucydur & 24k Inlay
+            </div>
+
+            <!-- Quick selector buttons -->
+            <div class="hotspots-legend">
+              <button class="legend-pill" onclick="document.querySelector('.hotspot-escapement').click()">01. Tourbillon Escapement</button>
+              <button class="legend-pill" onclick="document.querySelector('.hotspot-wings').click()">02. Harmonic Wing Cams</button>
+              <button class="legend-pill" onclick="document.querySelector('.hotspot-chitin').click()">03. Zirconium Chitin</button>
+              <button class="legend-pill" onclick="document.querySelector('.hotspot-tarsal').click()">04. Micro-Tarsal Claws</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== ATELIER CRAFTSMANSHIP & BENCH DISCIPLINES ===============-->
+    <section class="section" id="atelier-craft">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Swiss Horological Lineage</span>
+          <h2 class="section__title">Haute Horology Atelier & Bench Disciplines</h2>
+          <p class="section__desc">
+            Inside our masterwork studios in Le Brassus and Geneva, horologists and micro-sculptors unite centuries of horological lineage with aerospace metallurgy.
+          </p>
+        </div>
+
+        <div class="craft__grid">
+          <div class="craft__photo-frame">
+            <img src="assets/img/horology_workshop_1789024372157.jpg" alt="Master Watchmaker Assembling Micro-Escapement" class="craft__photo-img" id="img-atelier-workshop">
+            <div class="craft__photo-badge">
+              <i class="ri-microscope-line"></i> Atelier Le Brassus // Bench Station 04 // 40× Magnification
+            </div>
+          </div>
+
+          <div>
+            <div style="font-family: var(--mono-font); font-size: 0.8rem; color: var(--accent-color); margin-bottom: 0.5rem; letter-spacing: 0.1em;">
+              THE RESTRAINT OF PURE MECHANICS
+            </div>
+            <h3 style="font-size: 1.65rem; line-height: 1.3; margin-bottom: 1rem;">
+              Zero Electronics. No Batteries. <br>Pure Escapement Kinetics.
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--gray-light); line-height: 1.7; margin-bottom: 1.5rem;">
+              Every Entoma arthropod functions autonomously through precision energy storage in dual Nivaflex mainsprings. Kinetic power is metered through custom Swiss lever tourbillons and transmitted via microscopic titanium pinion gear trains calibrated to 0.005mm tolerances.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+              <div>
+                <div style="font-family: var(--display-font); font-size: 1.6rem; font-weight: 700; color: var(--accent-color);">480+ Hrs</div>
+                <div style="font-family: var(--mono-font); font-size: 0.72rem; color: var(--gray-color); text-transform: uppercase;">Average Bench Hand-Hours</div>
+              </div>
+              <div>
+                <div style="font-family: var(--display-font); font-size: 1.6rem; font-weight: 700; color: var(--accent-color);">±2 Sec/Day</div>
+                <div style="font-family: var(--mono-font); font-size: 0.72rem; color: var(--gray-color); text-transform: uppercase;">Chronometric Tolerance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Bench Disciplines Grid -->
+        <div class="craft__disciplines-grid">
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 01</span>
+            <h4 class="discipline__title">Wire-EDM Micro-Machining</h4>
+            <p class="discipline__desc">Submerged electrical discharge wire eroding carves grade 5 titanium and phosphor bronze bridges with sub-micron 0.005mm geometric repeatability.</p>
+            <div class="discipline__spec">Substrate: Ti-6Al-4V Aerospace Grade</div>
+          </div>
+
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 02</span>
+            <h4 class="discipline__title">Hand Anglage & Black Polish</h4>
+            <p class="discipline__desc">Internal angles are hand-chamfered with boxwood pegs and diamond lapping paste to produce mirror-black specular light reflection at 45° bevels.</p>
+            <div class="discipline__spec">Finishing: Côtes de Genève & Perlage</div>
+          </div>
+
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 03</span>
+            <h4 class="discipline__title">Optical Vapor Nanodeposition</h4>
+            <p class="discipline__desc">Wing membranes are placed in high-vacuum physical vapor chambers to deposit alternating 12-nanometer titanium oxide layers, yielding non-fading structural iridescence.</p>
+            <div class="discipline__spec">Optics: 100% Pigment-Free Nanostructures</div>
+          </div>
+
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 04</span>
+            <h4 class="discipline__title">Synthetic Corundum Setting</h4>
+            <p class="discipline__desc">High-purity synthetic ruby and sapphire bearings are friction-fitted into bridges to reduce axle wear and achieve friction coefficients below 0.04.</p>
+            <div class="discipline__spec">Endstones: Cap jewels with Incabloc shock</div>
+          </div>
+
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 05</span>
+            <h4 class="discipline__title">6-Position Dynamic Regulation</h4>
+            <p class="discipline__desc">Balance wheels are poised using gold micro-screws and tested continuously in 6 physical orientations across a 14-day timing cycle before chassis installation.</p>
+            <div class="discipline__spec">Cadence: 21,600 to 36,000 VPH</div>
+          </div>
+
+          <div class="discipline__card">
+            <span class="discipline__num">DISCIPLINE 06</span>
+            <h4 class="discipline__title">24k Damascene & Hand Filigree</h4>
+            <p class="discipline__desc">Master engravers hand-cut dovetail micro-grooves into hardened steel carapaces and hammer 99.99% pure 24k gold ribbon under binocular stereomicroscopes.</p>
+            <div class="discipline__spec">Gold Inlay: 24-Karat Certified Bullion</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== MASTER CALIBER COMPARISON MATRIX ===============-->
+    <section class="section" id="calibers">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Horological Movement Architecture</span>
+          <h2 class="section__title">Master Caliber Engineering Matrix</h2>
+          <p class="section__desc">
+            Detailed technical breakdown of the proprietary in-house mechanical movements engineered exclusively for Entoma automata.
+          </p>
+        </div>
+
+        <div class="caliber-table-wrapper">
+          <table class="caliber-table">
+            <thead>
+              <tr>
+                <th>Caliber Ref</th>
+                <th>Specimen</th>
+                <th>Kinetic Architecture</th>
+                <th>Frequency</th>
+                <th>Jewels</th>
+                <th>Power Reserve</th>
+                <th>Acoustic Rating</th>
+                <th>Warranty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="caliber-ref">Caliber EN-01</td>
+                <td><strong>Queen Bee</strong></td>
+                <td>Twin-Spring Escapement & Abdominal Flex</td>
+                <td><span class="caliber-badge">28,800 vph (4 Hz)</span></td>
+                <td>36 Rubies</td>
+                <td>72 Hours</td>
+                <td>32 dB Whisper</td>
+                <td>50-Year Heritage</td>
+              </tr>
+              <tr>
+                <td class="caliber-ref">Caliber EN-04</td>
+                <td><strong>Magic Butterfly</strong></td>
+                <td>Harmonic Dual-Cam Fluctuation Governor</td>
+                <td><span class="caliber-badge">21,600 vph (3 Hz)</span></td>
+                <td>28 Rubies</td>
+                <td>60 Hours</td>
+                <td>28 dB Silent</td>
+                <td>50-Year Heritage</td>
+              </tr>
+              <tr>
+                <td class="caliber-ref">Caliber EN-09</td>
+                <td><strong>Flower Beetle</strong></td>
+                <td>Perpetual Rotor with Motorized Elytra Pusher</td>
+                <td><span class="caliber-badge">18,000 vph (2.5 Hz)</span></td>
+                <td>44 Jewels</td>
+                <td>96 Hours</td>
+                <td>35 dB Clockwork</td>
+                <td>Lifetime Atelier</td>
+              </tr>
+              <tr>
+                <td class="caliber-ref">Caliber EN-12</td>
+                <td><strong>Chronos Dragonfly</strong></td>
+                <td>High-Beat Quad Differential Wing Drive</td>
+                <td><span class="caliber-badge">36,000 vph (5 Hz)</span></td>
+                <td>52 Corundum</td>
+                <td>48 Hours</td>
+                <td>30 dB High-Frequency</td>
+                <td>50-Year Heritage</td>
+              </tr>
+              <tr>
+                <td class="caliber-ref">Caliber EN-15</td>
+                <td><strong>Aegis Scarab</strong></td>
+                <td>Astronomical Solar Tourbillon & Dual Barrels</td>
+                <td><span class="caliber-badge">21,600 vph (3 Hz)</span></td>
+                <td>48 Jewels</td>
+                <td>120 Hours</td>
+                <td>31 dB Resonant</td>
+                <td>Lifetime Atelier</td>
+              </tr>
+              <tr>
+                <td class="caliber-ref">Caliber EN-08</td>
+                <td><strong>Lunar Moth</strong></td>
+                <td>Harmonic Pendulum Resonance & Nocturnal Phosphor</td>
+                <td><span class="caliber-badge">21,600 vph (3 Hz)</span></td>
+                <td>32 Rubies</td>
+                <td>68 Hours</td>
+                <td>26 dB Murmur</td>
+                <td>50-Year Heritage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== BESPOKE ATELIER CONFIGURATOR ===============-->
+    <section class="section" id="configurator">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Private Commission Studio</span>
+          <h2 class="section__title">The Bespoke Atelier</h2>
+          <p class="section__desc">
+            Personalize your kinetic masterwork. Select chassis architecture, hand-engraved metal finishes, wing membrane optics, and natural gemstone cores.
+          </p>
+        </div>
+
+        <div class="configurator__grid">
+          <!-- Interactive Preview Stage -->
+          <div class="configurator__stage">
+            <div class="configurator__glow" id="config-preview-glow"></div>
+            <img src="assets/img/insect-1.png" alt="Bespoke Specimen Preview" class="configurator__img" id="config-preview-img">
+            
+            <div class="configurator__hud">
+              <div class="configurator__serial">
+                <div>SPECIMEN SPECIFICATION</div>
+                <strong id="config-serial-display">BESPOKE-QB-OBS-SAP-2026</strong>
+              </div>
+              <div class="configurator__price" id="config-price-display">$5,999</div>
+            </div>
+          </div>
+
+          <!-- Customization Controls -->
+          <div class="configurator__controls">
+            <!-- 1. Chassis Architecture -->
+            <div class="config-group">
+              <div class="config-group__title">
+                <span>01</span> Select Chassis Architecture
+              </div>
+              <div class="config-options-grid">
+                <button class="config-pill config-model-btn active" data-model="queen-bee" data-name="Queen Bee" data-price="5999">
+                  <strong>Queen Bee</strong>
+                  <span class="config-pill-price">Base $5,999</span>
+                </button>
+                <button class="config-pill config-model-btn" data-model="magic-butterfly" data-name="Magic Butterfly" data-price="3999">
+                  <strong>Magic Butterfly</strong>
+                  <span class="config-pill-price">Base $3,999</span>
+                </button>
+                <button class="config-pill config-model-btn" data-model="flower-beetle" data-name="Flower Beetle" data-price="8999">
+                  <strong>Flower Beetle</strong>
+                  <span class="config-pill-price">Base $8,999</span>
+                </button>
+                <button class="config-pill config-model-btn" data-model="chronos-dragonfly" data-name="Chronos Dragonfly" data-price="7450">
+                  <strong>Chronos Dragonfly</strong>
+                  <span class="config-pill-price">Base $7,450</span>
+                </button>
+                <button class="config-pill config-model-btn" data-model="aegis-scarab" data-name="Aegis Scarab" data-price="9800">
+                  <strong>Aegis Scarab</strong>
+                  <span class="config-pill-price">Base $9,800</span>
+                </button>
+                <button class="config-pill config-model-btn" data-model="lunar-moth" data-name="Lunar Moth" data-price="6250">
+                  <strong>Lunar Moth</strong>
+                  <span class="config-pill-price">Base $6,250</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Chassis Finish -->
+            <div class="config-group">
+              <div class="config-group__title">
+                <span>02</span> Exoskeleton Metal Finish
+              </div>
+              <div class="config-options-grid">
+                <button class="config-pill config-finish-btn active" data-finish="obsidian" data-name="Midnight Obsidian" data-cost="0">
+                  <strong>Midnight Obsidian</strong>
+                  <span class="config-pill-price">Included</span>
+                </button>
+                <button class="config-pill config-finish-btn" data-finish="gold" data-name="24k Imperial Gold" data-cost="1200">
+                  <strong>Imperial 24k Gold</strong>
+                  <span class="config-pill-price">+$1,200</span>
+                </button>
+                <button class="config-pill config-finish-btn" data-finish="emerald" data-name="Verdigris Emerald" data-cost="850">
+                  <strong>Verdigris Patina</strong>
+                  <span class="config-pill-price">+$850</span>
+                </button>
+                <button class="config-pill config-finish-btn" data-finish="titanium" data-name="Titanium Frost" data-cost="600">
+                  <strong>Titanium Frost</strong>
+                  <span class="config-pill-price">+$600</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Wing Membrane -->
+            <div class="config-group">
+              <div class="config-group__title">
+                <span>03</span> Wing Membrane Optics
+              </div>
+              <div class="config-options-grid">
+                <button class="config-pill config-wing-btn active" data-wing="prism" data-name="Dichroic Prism Silica" data-cost="0">
+                  <strong>Dichroic Prism</strong>
+                  <span class="config-pill-price">Included</span>
+                </button>
+                <button class="config-pill config-wing-btn" data-wing="quartz" data-name="Smoked Quartz Crystal" data-cost="950">
+                  <strong>Smoked Quartz</strong>
+                  <span class="config-pill-price">+$950</span>
+                </button>
+                <button class="config-pill config-wing-btn" data-wing="filigree" data-name="Hand-Pierced Filigree" data-cost="1400">
+                  <strong>Gold Filigree</strong>
+                  <span class="config-pill-price">+$1,400</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 4. Core Gemstone -->
+            <div class="config-group">
+              <div class="config-group__title">
+                <span>04</span> Ocular & Core Gemstone
+              </div>
+              <div class="config-options-grid">
+                <button class="config-pill config-jewel-btn active" data-jewel="sapphire" data-name="Royal Sapphire" data-cost="0">
+                  <strong>Royal Sapphire</strong>
+                  <span class="config-pill-price">Included</span>
+                </button>
+                <button class="config-pill config-jewel-btn" data-jewel="emerald" data-name="Colombian Emerald" data-cost="1100">
+                  <strong>Colombian Emerald</strong>
+                  <span class="config-pill-price">+$1,100</span>
+                </button>
+                <button class="config-pill config-jewel-btn" data-jewel="ruby" data-name="Pigeon Blood Ruby" data-cost="1350">
+                  <strong>Burmese Ruby</strong>
+                  <span class="config-pill-price">+$1,350</span>
+                </button>
+              </div>
+            </div>
+
+            <button class="btn-primary w-full" id="config-order-btn" style="width: 100%; justify-content: center; margin-top: 1.5rem;">
+              Commission This Configuration <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== HOROLOGY MOVEMENT BANNER ===============-->
+    <section class="movement-banner">
+      <div class="container">
+        <div class="movement-gears-sim">
+          <i class="ri-settings-5-line gear-icon spin-cw"></i>
+          <i class="ri-settings-3-line gear-icon spin-ccw"></i>
+          <i class="ri-settings-4-line gear-icon spin-cw"></i>
+        </div>
+        <h3 class="section__title" style="font-size: 1.8rem; margin-bottom: 0.75rem;">
+          Caliber Precision Tuned to 21,600 VPH
+        </h3>
+        <p style="max-width: 620px; margin: 0 auto 1.5rem; color: var(--gray-light);">
+          Every automaton utilizes jewels cut from raw synthetic corundum and micro-hairsprings wound by master watchmakers in Le Brassus, Switzerland.
+        </p>
+        <button class="btn-outline" onclick="document.getElementById('audio-toggle-btn').click()">
+          <i class="ri-volume-up-line"></i> Experience Clockwork Cadence
+        </button>
+      </div>
+    </section>
+
+    <!--=============== CURATED VITRINE ARCHITECTURE ===============-->
+    <section class="section" id="vitrines">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Museum Presentation & Conservation</span>
+          <h2 class="section__title">Curated Vitrine Architecture</h2>
+          <p class="section__desc">
+            Every masterwork is delivered in a hermetically sealed, museum-certified quartz cloche engineered to preserve micro-mechanics in pristine condition across generations.
+          </p>
+        </div>
+
+        <div class="vitrine__wrapper">
+          <div class="vitrine__grid">
+            <div class="vitrine__image-box">
+              <img src="assets/img/luxury_vitrine_1789024390557.jpg" alt="Illuminated Museum Glass Vitrine for Automata" class="vitrine__img" id="img-vitrine-showcase">
+            </div>
+
+            <div class="vitrine__specs-list">
+              <div class="vitrine__spec-item">
+                <div class="vitrine__spec-icon"><i class="ri-shield-star-line"></i></div>
+                <div>
+                  <h4 class="vitrine__spec-heading">Opti-Clear Hand-Blown Quartz Cloche</h4>
+                  <p class="vitrine__spec-text">99.8% light transmission with dual-sided anti-reflective nanocoating and UV400 museum filter that shields precious gold filigree and thin-film wing foils from photo-degradation.</p>
+                </div>
+              </div>
+
+              <div class="vitrine__spec-item">
+                <div class="vitrine__spec-icon"><i class="ri-temp-cold-line"></i></div>
+                <div>
+                  <h4 class="vitrine__spec-heading">Hermetic Nitrogen Base Seal (42% RH)</h4>
+                  <p class="vitrine__spec-text">Micro-climate baseline regulator featuring integrated passive zeolite desiccant cells, keeping internal humidity locked at an optimal 42% to completely prevent metal oxidation.</p>
+                </div>
+              </div>
+
+              <div class="vitrine__spec-item">
+                <div class="vitrine__spec-icon"><i class="ri-wireless-charging-line"></i></div>
+                <div>
+                  <h4 class="vitrine__spec-heading">Magnetic Non-Contact Induction Winder</h4>
+                  <p class="vitrine__spec-text">Concealed within the solid smoked basalt pedestal, an electromagnetic pulse driver gently oscillates the automaton's weighted rotor without physical contact, keeping the piece perpetually charged.</p>
+                </div>
+              </div>
+
+              <div class="vitrine__spec-item">
+                <div class="vitrine__spec-icon"><i class="ri-lightbulb-flash-line"></i></div>
+                <div>
+                  <h4 class="vitrine__spec-heading">2700K Optical Fiber Perimeter Lighting</h4>
+                  <p class="vitrine__spec-text">Warm high-CRI (98+) fiber-optic illuminators radiate cold light from the plinth bezel, revealing depth and microscopic beveling with zero thermal heat emission.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== SALONS & EXHIBITIONS ===============-->
+    <section class="section" id="salons">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Private Viewing Itinerary</span>
+          <h2 class="section__title">Global Exhibition Salons</h2>
+          <p class="section__desc">
+            Experience our kinetic specimens in person during private salon viewings at world art and horology capitals.
+          </p>
+        </div>
+
+        <div class="salons__grid">
+          <!-- Salon 1 -->
+          <div class="salon__card">
+            <div>
+              <div class="salon__date">Oct 14 – 18, 2026</div>
+              <h3 class="salon__city">Geneva</h3>
+              <div class="salon__venue">Grand Théâtre de Genève // Haute Horlogerie Salon</div>
+              <p style="font-size: 0.85rem; color: var(--gray-light);">
+                Unveiling of the masterwork Cetonia series with live kinetic demonstrations by master watchmakers.
+              </p>
+            </div>
+            <div class="salon__footer">
+              <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--accent-color);">Strictly RSVP</span>
+              <a href="#" class="btn-outline salon-reserve-btn" data-salon="Geneva Haute Horlogerie Salon" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                Reserve Viewing
+              </a>
+            </div>
+          </div>
+
+          <!-- Salon 2 -->
+          <div class="salon__card">
+            <div>
+              <div class="salon__date">Nov 02 – 06, 2026</div>
+              <h3 class="salon__city">Tokyo</h3>
+              <div class="salon__venue">Roppongi Hills Mori Arts Center // Bionic Galleria</div>
+              <p style="font-size: 0.85rem; color: var(--gray-light);">
+                Featuring the mechanical Morpho butterfly collection with Japanese lacquer and titanium damascus inlays.
+              </p>
+            </div>
+            <div class="salon__footer">
+              <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--accent-color);">12 Private Slots</span>
+              <a href="#" class="btn-outline salon-reserve-btn" data-salon="Tokyo Roppongi Arts Center" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                Reserve Viewing
+              </a>
+            </div>
+          </div>
+
+          <!-- Salon 3 -->
+          <div class="salon__card">
+            <div>
+              <div class="salon__date">Dec 10 – 14, 2026</div>
+              <h3 class="salon__city">Paris</h3>
+              <div class="salon__venue">Place Vendôme Private Suite // Haute Joaillerie Week</div>
+              <p style="font-size: 0.85rem; color: var(--gray-light);">
+                Intimate private previews of gem-encrusted coleoptera automata and bespoke client commissions.
+              </p>
+            </div>
+            <div class="salon__footer">
+              <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--accent-color);">Private Salon</span>
+              <a href="#" class="btn-outline salon-reserve-btn" data-salon="Paris Place Vendôme Private Suite" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                Reserve Viewing
+              </a>
+            </div>
+          </div>
+
+          <!-- Salon 4 -->
+          <div class="salon__card">
+            <div>
+              <div class="salon__date">Jan 20 – 24, 2027</div>
+              <h3 class="salon__city">New York</h3>
+              <div class="salon__venue">Madison Avenue Gallery // Kinetic Sculptures Biennial</div>
+              <p style="font-size: 0.85rem; color: var(--gray-light);">
+                Complete trilogy exhibition alongside bespoke hand-wound glass vitrines and museum documentation.
+              </p>
+            </div>
+            <div class="salon__footer">
+              <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--accent-color);">By Invitation</span>
+              <a href="#" class="btn-outline salon-reserve-btn" data-salon="New York Madison Avenue Gallery" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                Reserve Viewing
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== PROVENANCE & AUTHENTICITY LEDGER ===============-->
+    <section class="section" id="ledger">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Cryptographic Provenance</span>
+          <h2 class="section__title">Certificate of Authenticity Ledger</h2>
+          <p class="section__desc">
+            Every Entoma automaton is registered in our permanent cryptographic archive. Enter a specimen serial number to inspect ownership history, mastercraftsman signatures, and calibration data.
+          </p>
+        </div>
+
+        <div class="ledger__card">
+          <i class="ri-shield-check-line" style="font-size: 2.8rem; color: var(--accent-color);"></i>
+          <h3 style="font-size: 1.5rem; margin-block: 0.75rem 0.25rem;">Specimen Archive Verification</h3>
+          <p style="font-size: 0.9rem; color: var(--gray-light);">
+            Input your serial engraved on the specimen's ventral titanium carriage.
+          </p>
+
+          <div class="ledger__search-bar">
+            <input type="text" class="ledger__input" id="ledger-serial-input" placeholder="e.g. ENT-084-QB" value="ENT-084-QB" aria-label="Specimen Serial Number">
+            <button class="ledger__btn" id="ledger-verify-btn">Verify <i class="ri-search-line"></i></button>
+          </div>
+
+          <!-- Quick test sample pills -->
+          <div class="ledger__quick-pills">
+            <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--gray-color);">Test Serials:</span>
+            <button class="quick-serial-pill" data-serial="ENT-084-QB">Queen Bee (#084)</button>
+            <button class="quick-serial-pill" data-serial="ENT-102-MB">Butterfly (#102)</button>
+            <button class="quick-serial-pill" data-serial="ENT-217-FB">Flower Beetle (#217)</button>
+            <button class="quick-serial-pill" data-serial="ENT-305-CD">Dragonfly (#305)</button>
+            <button class="quick-serial-pill" data-serial="ENT-412-GS">Golden Scarab (#412)</button>
+            <button class="quick-serial-pill" data-serial="ENT-518-LM">Lunar Moth (#518)</button>
+          </div>
+
+          <!-- Verification Results Output -->
+          <div id="ledger-result-box" class="hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== CRITICAL ACCLAIM & TESTIMONIALS ===============-->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Critical Acclaim</span>
+          <h2 class="section__title">Voices of Haute Horology</h2>
+          <p class="section__desc">
+            Celebrated by premier art curators, horological scholars, and private collectors across the globe.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "Entoma captures the organic poetry of the natural world through micro-engineering that rivals the greatest Swiss complications. It is kinetic sculpture at the apex of its craft."
+            </p>
+            <div class="testimonial__author">
+              <div>
+                <div class="author__name">Jean-Luc Moreau</div>
+                <div class="author__org">Senior Curator, Musée International d'Horlogerie</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "The flutter of the Morpho butterfly's dichroic wings in motion is uncanny. To achieve this without motors or electronics, relying purely on gear escapements, is miraculous."
+            </p>
+            <div class="testimonial__author">
+              <div>
+                <div class="author__name">Aiko Tanaka</div>
+                <div class="author__org">Professor of Biomimetic Design, Tokyo University of the Arts</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial__card">
+            <p class="testimonial__quote">
+              "In an era of fleeting digital screens, owning a piece of Entoma is like holding a living mechanical jewel from the golden age of clockwork wonders."
+            </p>
+            <div class="testimonial__author">
+              <div>
+                <div class="author__name">Lord Julian Sterling</div>
+                <div class="author__org">Private Collector, London & Zurich</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#hero" class="nav__logo" style="margin-bottom: 0.5rem;">
+            <svg class="nav__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="8" y="7" width="8" height="10" rx="4"/>
+              <circle cx="12" cy="11" r="1.5"/>
+            </svg>
+            <span>ENTOMA</span>
+          </a>
+          <p>
+            The world's foremost atelier of kinetic biomimetic automata and micro-horological arthropod sculptures.
+          </p>
+          <div style="margin-top: 1.25rem; font-family: var(--mono-font); font-size: 0.78rem; color: var(--accent-color);">
+            Ateliers: Geneva • Tokyo • Paris
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__title">Collection</h4>
+          <ul class="footer__links">
+            <li><a href="#card-queen-bee" class="footer__link">Elegant Queen Bee</a></li>
+            <li><a href="#card-magic-butterfly" class="footer__link">Magic Butterfly</a></li>
+            <li><a href="#card-flower-beetle" class="footer__link">Wonderful Flower Beetle</a></li>
+            <li><a href="#card-chronos-dragonfly" class="footer__link">Chronos Dragonfly</a></li>
+            <li><a href="#card-aegis-scarab" class="footer__link">Aegis Golden Scarab</a></li>
+            <li><a href="#card-lunar-moth" class="footer__link">Lunar Emperor Moth</a></li>
+            <li><a href="#configurator" class="footer__link">Bespoke Commissions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__title">Atelier</h4>
+          <ul class="footer__links">
+            <li><a href="#atelier-craft" class="footer__link">Haute Horology Craft</a></li>
+            <li><a href="#calibers" class="footer__link">Caliber Movements</a></li>
+            <li><a href="#anatomy" class="footer__link">Micro-Escapement</a></li>
+            <li><a href="#vitrines" class="footer__link">Curated Vitrines</a></li>
+            <li><a href="#salons" class="footer__link">Exhibition Salons</a></li>
+            <li><a href="#ledger" class="footer__link">Provenance Registry</a></li>
+            <li><a href="#" class="footer__link concierge-trigger-btn" data-salon="Private Viewing Concierge">Private Concierge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__title">Atelier Ledger</h4>
+          <p style="font-size: 0.8rem; color: var(--gray-light); margin-bottom: 1rem;">
+            Subscribe to private salon announcements and new edition releases.
+          </p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to private atelier release bulletins'); this.reset();" style="display: flex; border: 1px solid var(--border-color);">
+            <input type="email" required placeholder="collector@domain.com" style="padding: 0.6rem 0.8rem; font-size: 0.8rem; color: var(--white-color); background: var(--black-color); width: 100%;">
+            <button type="submit" class="btn-primary" style="padding: 0.6rem 0.9rem; font-size: 0.75rem;">
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div>© 2026 ENTOMA ATELIER D'AUTOMATES. ALL RIGHTS RESERVED.</div>
+        <div>HAUTE HORLOGERIE & BIOMIMETIC KINETICS</div>
+      </div>
+    </div>
+  </footer>
+
+  <!--=============== SPECIMEN DOSSIER MODAL ===============-->
+  <div class="modal-wrapper" id="specimen-modal" role="dialog" aria-modal="true" aria-labelledby="modal-specimen-title">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Specimen Dossier">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <div class="modal-specimen-grid">
+        <!-- Interactive 360 Visual Stage -->
+        <div class="modal-specimen-stage">
+          <img src="assets/img/insect-1.png" alt="Specimen Macro View" class="modal-specimen-img" id="modal-specimen-img">
+          
+          <div class="rotation-control">
+            <div class="rotation-label">
+              <span><i class="ri-refresh-line"></i> 360° Inspection Angle</span>
+              <span id="rotation-angle-deg">0°</span>
+            </div>
+            <input type="range" min="-60" max="60" value="0" class="rotation-slider" id="rotation-slider" aria-label="Specimen Rotation Angle">
+          </div>
+        </div>
+
+        <!-- Technical Datasheet & Narrative -->
+        <div class="modal-specimen-details">
+          <div>
+            <div class="modal-header-tag" id="modal-specimen-taxon">Order Hymenoptera</div>
+            <h2 class="modal-specimen-title" id="modal-specimen-title">Elegant Queen Bee</h2>
+            <div class="modal-specimen-latin" id="modal-specimen-latin">Apis Mechanica Regalis</div>
+          </div>
+
+          <p id="modal-specimen-desc" style="font-size: 0.95rem; color: var(--gray-light); line-height: 1.65;">
+            An exquisite kinetic masterwork blending organic posture with Swiss watchmaking escapements.
+          </p>
+
+          <table class="modal-specs-table">
+            <tbody>
+              <tr>
+                <td>Serial Catalog</td>
+                <td id="modal-specimen-serial">ENT-084-QB</td>
+              </tr>
+              <tr>
+                <td>Edition Status</td>
+                <td id="modal-specimen-edition">Limited Edition — 12 Pieces</td>
+              </tr>
+              <tr>
+                <td>Movement</td>
+                <td id="modal-specimen-movement">Caliber EN-01 Twin-Spring Escapement</td>
+              </tr>
+              <tr>
+                <td>Power Reserve</td>
+                <td id="modal-specimen-power">72 Hours Kinetic Autonomy</td>
+              </tr>
+              <tr>
+                <td>Dimensions & Weight</td>
+                <td><span id="modal-spec-dimensions">148 × 112 × 42 mm</span> (<span id="modal-spec-weight">142 g</span>)</td>
+              </tr>
+              <tr>
+                <td>Materials</td>
+                <td id="modal-spec-materials">Grade 5 Aerospace Titanium, 24k Gold Leaf</td>
+              </tr>
+              <tr>
+                <td>Jeweled Bearings</td>
+                <td id="modal-spec-jewels">36 Synthetic Ruby & Sapphire</td>
+              </tr>
+              <tr>
+                <td>Bench Craft Time</td>
+                <td id="modal-spec-craft">320 Hand-Bench Hours</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+            <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Craftsmanship Highlights</h4>
+            <ul class="modal-highlights" id="modal-specimen-highlights">
+              <li><i class="ri-check-line"></i> <span>Micro-machined tourbillon cage visible</span></li>
+              <li><i class="ri-check-line"></i> <span>Hand-beveled 24k gold leaf inlay</span></li>
+            </ul>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.25rem; margin-top: 0.5rem;">
+            <div>
+              <span style="font-family: var(--mono-font); font-size: 0.75rem; color: var(--gray-color);">Acquisition Price</span>
+              <div style="font-family: var(--mono-font); font-size: 1.75rem; font-weight: 700; color: var(--accent-color);" id="modal-specimen-price">$5,999</div>
+            </div>
+            <button class="btn-primary" id="modal-acquire-btn">
+              Inquire Acquisition <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--=============== CONCIERGE & SALON BOOKING MODAL ===============-->
+  <div class="modal-wrapper" id="concierge-modal" role="dialog" aria-modal="true" aria-labelledby="concierge-modal-title">
+    <div class="modal-overlay" id="concierge-overlay"></div>
+    <div class="modal-box" style="max-width: 540px;">
+      <button class="modal-close" id="concierge-close-btn" aria-label="Close Concierge Modal">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <span class="section__eyebrow" style="margin-bottom: 0.5rem;">Private Concierge</span>
+      <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;" id="concierge-modal-title">Acquisition & Viewing Request</h2>
+      <p style="font-size: 0.88rem; color: var(--gray-light); margin-bottom: 1.5rem;">
+        Direct your inquiry to our master curator. Private salon viewings and commissioned automata are accompanied by custom certified vitrines.
+      </p>
+
+      <form class="concierge-form" id="concierge-form">
+        <div class="form-group">
+          <label class="form-label" for="concierge-specimen-title">Specimen or Salon Requested</label>
+          <input type="text" class="form-input" id="concierge-specimen-title" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="concierge-specimen-price">Estimated Allocation</label>
+          <input type="text" class="form-input" id="concierge-specimen-price" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="concierge-name">Full Name</label>
+          <input type="text" class="form-input" id="concierge-name" required placeholder="Collector Name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="concierge-email">Private Email</label>
+          <input type="email" class="form-input" id="concierge-email" required placeholder="collector@domain.com">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="concierge-location">Preferred Salon City</label>
+          <select class="form-select" id="concierge-location">
+            <option value="Geneva">Geneva Atelier (Switzerland)</option>
+            <option value="Tokyo">Tokyo Roppongi Salon (Japan)</option>
+            <option value="Paris">Paris Place Vendôme Suite (France)</option>
+            <option value="New York">New York Madison Avenue (USA)</option>
+            <option value="Private Delivery">White-Glove Private Courier Delivery</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="concierge-notes">Special Engraving or Custom Requests</label>
+          <textarea class="form-textarea" id="concierge-notes" rows="3" placeholder="Optional custom serial inscription, bespoke gemstone selection, or delivery instructions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+          Submit Private Inscription <i class="ri-check-line"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!--=============== JAVASCRIPT ENGINE ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

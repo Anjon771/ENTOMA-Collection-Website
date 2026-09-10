@@ -1,0 +1,6 @@
+{
+  "name": "Entoma — Bionic Entomology & Mechanical Automata",
+  "description": "Luxury kinetic art and haute horology landing page showcasing handcrafted biomimetic insect automata with interactive 3D cards, bespoke configurator, and exhibition salon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
